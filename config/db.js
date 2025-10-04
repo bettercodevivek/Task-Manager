@@ -11,7 +11,7 @@ const ConnectDB = async() => {
 
   const options = {
     serverSelectionTimeoutMS:10000, // mongodb driver ko agar itne time mein server nahi mila on connection, it will give error
-    socketSelectionTimeoutMS:45000, // this is basically the connection between app and driver, ab initial connection ke baad, kisi query pe itne time mein if no activity from mongo side, error
+    socketTimeoutMS:45000, // this is basically the connection between app and driver, ab initial connection ke baad, kisi query pe itne time mein if no activity from mongo side, error
     maxPoolSize:10 // Number of connections that stay open for queries, once a query uses a connection its dumped back into pool for reuse
   }
 
